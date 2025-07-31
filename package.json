@@ -1,0 +1,26 @@
+{
+    "name": "selext",
+    "type": "module",
+    "keywords": [],
+    "author": "",
+    "license": "Apache-2.0",
+    "packageManager": "pnpm@10.13.1",
+    "scripts": {
+        "build": "tsx build.ts"
+    },
+    "workspaces": [
+        "package/*"
+    ],
+    "dependencies": {
+        "@selext/core": "workspace:^"
+    },
+    "devDependencies": {
+        "@types/node": "^24.1.0",
+        "dotenv": "^17.2.1",
+        "execa": "^9.6.0",
+        "prettier": "^3.6.2",
+        "tsup": "^8.5.0",
+        "tsx": "^4.20.3",
+        "typescript": "^5.8.3"
+    }
+}

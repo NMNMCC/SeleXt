@@ -1,0 +1,15 @@
+{
+    "name": "@selext/core",
+    "version": "1.0.0",
+    "type": "module",
+    "license": "Apache-2.0",
+    "packageManager": "pnpm@10.13.1",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "default": "./dist/index.ts"
+        }
+    }
+}
