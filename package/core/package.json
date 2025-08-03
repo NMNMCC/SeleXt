@@ -1,6 +1,6 @@
 {
     "name": "@selext/core",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "type": "module",
     "license": "Apache-2.0",
     "packageManager": "pnpm@10.13.1",
@@ -9,7 +9,8 @@
     ],
     "exports": {
         ".": {
-            "default": "./dist/index.ts"
+            "default": "./dist/index.js",
+            "types": "./dist/index.d.ts"
         }
     }
 }
