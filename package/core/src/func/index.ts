@@ -107,9 +107,9 @@ export const createContract = <
     contract: TContract & Contract<TContract>,
 ): UnionToIntersection<TContract[keyof TContract]> =>
     ((input: Input<any, any, any, any>) => {
-        const term = contract[input[0]];
+        const term = contract[input.operation];
         if (term === undefined) {
-            throw new Error(`Unknown operation: ${input[0]}`);
+            throw new Error(`Unknown operation: ${input.operation}`);
         }
-        return term(...input);
+        return term(input);
     }) as any;

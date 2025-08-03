@@ -103,7 +103,7 @@ export type Input<
     TOperation extends string,
     TParameter extends object = {},
     TSelect extends Select<TBase> = Select<TBase>,
-> = [operation: TOperation, parameter: TParameter, select: TSelect];
+> = { operation: TOperation; parameter: TParameter; select: TSelect };
 
 /**
  * Output type union: either success with selected data or failure response
@@ -131,7 +131,7 @@ export type Term<
     TFailureResponse extends FailureResponse<any> = never,
 > = {
     <TSelect extends Select<TBase>>(
-        ...input: Input<TBase, TOperation, TParameter, TSelect>
+        input: Input<TBase, TOperation, TParameter, TSelect>,
     ): Promise<Output<TBase, TFailureResponse, TSelect>>;
 };
 
